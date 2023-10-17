@@ -1,0 +1,33 @@
+<div class="container">
+  <h1 > Show All Emp data</h1> <a href="http://localhost:3000/emp/create" class="btn btn-danger">Home</a>
+  <br>
+  <br>
+    <table class="table table-hover">
+  <thead>
+    <tr>
+      <th scope="col">Email</th>
+      <th scope="col">Name</th>
+      <th scope="col">Password</th>
+      <th scope="col">mobile</th>
+      <th scope="col">City</th>
+      <th scope="col">Delete</th>
+      <th scope="col">Update</th>
+    </tr>
+  </thead>
+  <tbody>
+    {{#each employe}}
+   <tr class="table-success">
+      <th scope="row">{{this.email}}</th>
+      <td>{{this.name}}</td>
+      <td>{{this.pass}}</td>
+      <td>{{this.mobile}}</td>
+      <td>{{this.city}}</td>
+      <td><a href="delete/{{this.id}}" class="btn btn-primary">Delete</a></td>
+      <td><a href="update/{{this.id}}" class="btn btn-info">update</a></td>
+    </tr>
+    {{/each }}
+  
+  </tbody>
+  
+  </table>
+</div>
